@@ -1,0 +1,13 @@
+<div class="identity">
+    <h1>Desmond Chin</h1>
+    <h3>Full Stack Developer</h3>
+</div>
+
+{% for post in site.posts %}
+    <div class="posts-list">
+        <a href="{{ post.url }}">
+            <h2>{{ post.title }}</h2>
+        </a>
+        <p>{{ post.date | date_to_string }}</p>
+    </div>
+{% endfor %}
