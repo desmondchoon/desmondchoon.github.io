@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">DC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    <nav id="main-navbar" class="navbar fixed-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Desmond Chin</a>
+        <button class="rounded-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,19 +27,39 @@
     </nav>
     
     <section>
-        <div class="container pt-4">
+        <div class="wrapper">
             {{ content }}
         </div>
     </section>
-    <!-- <footer>
-        <div class="container">
-            &copy; Desmond Chin
+    <footer class="py-3 bg-dark navbar-dark">
+        <div class="container-fluid d-flex">
+            <div class="flex-grow-1">&copy; Desmond Chin</div>
+
+            <div>
+                <a target="_blank" href="{{ site.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+    <script>
+        if($(window).scrollTop() > 50){
+            $('#main-navbar').addClass('bg-light navbar-scrolled');
+        }else{
+            $('#main-navbar').removeClass('bg-light navbar-scrolled');
+        }
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 50){
+                $('#main-navbar').addClass('bg-light navbar-scrolled');
+            }else{
+                $('#main-navbar').removeClass('bg-light navbar-scrolled');
+            }
+        })
+    </script>
 </body>
 
 </html>

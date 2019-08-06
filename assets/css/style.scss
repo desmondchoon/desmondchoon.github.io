@@ -13,15 +13,40 @@ body{
     min-height: calc(100vh - 56px);
 }
 
+footer{
+    color: white;
+    a{
+        color: white !important;
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+}
+
+.wrapper{
+    overflow-x: hidden;
+}
+
 .title{
     font-family: 'Nunito', sans-serif;
     color: rgb(179, 179, 179);
     text-shadow: 2px 2px 4px rgb(204, 202, 202) !important;
 }
 
-.navbar{
+.contact-icon{
+    color: #333;
+    font-size: 1.5em;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+.navbar-scrolled{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: sticky; top: 0; z-index: 1030;
+    // position: sticky; top: 0; z-index: 1030;
+}
+
+.navbar{
+    background: none;
+    background-color: transparent;
 }
 
 .doc-sidebar{
@@ -41,5 +66,62 @@ body{
     overflow-x: auto;
     .nav-item{
         padding: 0.15rem 0.5rem;
+    }
+}
+
+._home{
+    .main{
+        background-image: url('/assets/images/laptop_bg.jpg');
+        background-size: cover;
+        min-height: 100vh;
+
+        position: relative;
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    }
+    .contact{
+        background-image: url('/assets/images/contact.jpg');
+        background-size: cover;
+        min-height: 60vh;
+        @media screen and (min-width: 992px){
+            min-height: 80vh;
+        }
+        background-position: top;
+
+        position: relative;
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            @media screen and (min-width: 992px){
+                top: 50%;
+            }
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    }
+}
+
+._blog{
+    .main{
+        background-image: url('/assets/images/blog.jpg');
+        background-size: cover;
+        background-position: bottom right;
+        min-height: 100vh;
+
+        position: relative;
+        .content{
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
     }
 }
