@@ -20,6 +20,11 @@ footer{
         padding-right: 0.25rem;
         padding-left: 0.25rem;
     }
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .wrapper{
@@ -71,7 +76,7 @@ footer{
 
 ._home{
     .main{
-        background-image: url('/assets/images/laptop_bg.jpg');
+        // background-image: url('/assets/images/laptop_bg.jpg');
         background-size: cover;
         min-height: 100vh;
 

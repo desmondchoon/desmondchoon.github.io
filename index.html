@@ -8,7 +8,7 @@ layout: default
     <div class="main">
         <div class="content container-fluid">
             <div class="row">
-                <div class="col-12 col-md-6 text-center">
+                <div class="col-12 text-center">
                     <h1 class="text-center title">DESMOND CHIN</h1>
                     <h3 class="text-center">Technologist<br>Engineer<br>Software Developer</h3>
                     <div class="py-2">
@@ -16,9 +16,9 @@ layout: default
                         <a class="contact-icon" target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
                         <a class="contact-icon" target="_blank" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
                     </div>
-                    <a href="mailto:desmond@desmondchin.xyz">desmond@desmondchin.xyz</a>
-                    <!-- <a href="#hire" class="btn btn-dark rounded-0">Hire Me</a>
-                    <a href="#about" class="btn btn-dark rounded-0">About</a> -->
+                    <!-- <a href="#hire" class="btn btn-dark rounded-0">Hire Me</a> -->
+                    <!-- <a href="#about" class="btn btn-dark rounded-0">About</a> -->
+                    <a target="_blank" href="mailto: contact@desmondchin.dev" class="btn btn-dark rounded-0">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -85,3 +85,16 @@ layout: default
         </div>
     </div> -->
 </div>
+
+<script src="/assets/js/three.r92.min.js"></script>
+<script src="/assets/js/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: ".main",
+  color: 0xaaaaaa,
+  backgroundColor: 0xffffff,
+  points: 5.00,
+  maxDistance: 22.00,
+  spacing: 20.00
+})
+</script>
